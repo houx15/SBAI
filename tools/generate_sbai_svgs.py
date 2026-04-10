@@ -146,8 +146,8 @@ def floor(spec: dict) -> str:
     accent = spec["accent"]
     panel = spec["panel"]
     return f"""
-    <ellipse cx="256" cy="384" rx="182" ry="52" fill="{panel}" opacity="0.96"/>
-    <path d="M64 388 q96 -40 192 0 q98 40 192 0" fill="none" stroke="{accent}" stroke-width="6" opacity="0.18" stroke-linecap="round"/>
+    <path d="M74 390 l118 -44 h128 l118 44 v26 h-364z" fill="{panel}" opacity="0.96"/>
+    <path d="M98 388 h316" fill="none" stroke="{accent}" stroke-width="6" opacity="0.18" stroke-linecap="round"/>
     """
 
 
@@ -155,15 +155,15 @@ def speech_bubble(x: int, y: int, w: int, h: int, text: str, fill: str, stroke: 
     tx = x + w / 2
     ty = y + h / 2 + 6
     return (
-        f'<g><rect x="{x}" y="{y}" width="{w}" height="{h}" rx="18" fill="{fill}" stroke="{stroke}" stroke-width="3"/>'
-        f'<path d="M{x + 32} {y + h} l12 18 14 -18" fill="{fill}" stroke="{stroke}" stroke-width="3" stroke-linejoin="round"/>'
+        f'<g><path d="M{x} {y + 8} l8 -8 h{w - 16} l8 8 v{h - 8} l-8 8 h-{w - 16} l-8 -8 z" fill="{fill}" stroke="{stroke}" stroke-width="3" stroke-linejoin="round"/>'
+        f'<path d="M{x + 34} {y + h} l10 16 14 -16" fill="{fill}" stroke="{stroke}" stroke-width="3" stroke-linejoin="round"/>'
         f'{svg_text(int(tx), int(ty), text, 18, stroke, 700, "middle")}</g>'
     )
 
 
 def tiny_card(x: int, y: int, w: int, h: int, accent: str, label: str, fill: str = "#FFFFFF") -> str:
     return (
-        f'<g><rect x="{x}" y="{y}" width="{w}" height="{h}" rx="12" fill="{fill}" stroke="{accent}" stroke-width="3"/>'
+        f'<g><rect x="{x}" y="{y}" width="{w}" height="{h}" rx="6" fill="{fill}" stroke="{accent}" stroke-width="3"/>'
         f'{svg_text(x + w // 2, y + h // 2 + 6, label, 16, accent, 800, "middle")}</g>'
     )
 
@@ -352,70 +352,95 @@ def prop_art(spec: dict) -> str:
 
 def face_markup(face_type: str, accent: str) -> str:
     if face_type in {"grin", "confident", "soft", "gentle", "smile", "focused", "proud", "sales"}:
-        eyes = '<circle cx="-20" cy="0" r="4"/><circle cx="20" cy="0" r="4"/>'
-        mouth = '<path d="M-14 22 q14 12 28 0" fill="none" stroke-width="4" stroke-linecap="round"/>'
+        eyes = '<rect x="-24" y="-4" width="8" height="8"/><rect x="16" y="-4" width="8" height="8"/>'
+        mouth = '<path d="M-14 20 l8 6 h12 l8 -6" fill="none" stroke-width="4" stroke-linecap="square" stroke-linejoin="round"/>'
     elif face_type in {"stern", "firm", "determined"}:
-        eyes = '<path d="M-26 -2 l12 -4 M14 -6 l12 4" stroke-width="4" stroke-linecap="round"/>'
-        mouth = '<path d="M-12 22 h24" fill="none" stroke-width="4" stroke-linecap="round"/>'
+        eyes = '<path d="M-28 -2 l14 -4 M14 -6 l14 4" stroke-width="4" stroke-linecap="square"/>'
+        mouth = '<path d="M-12 22 h24" fill="none" stroke-width="4" stroke-linecap="square"/>'
     elif face_type == "blank":
-        eyes = '<circle cx="-20" cy="0" r="3"/><circle cx="20" cy="0" r="3"/>'
-        mouth = '<path d="M-10 22 h20" fill="none" stroke-width="3" stroke-linecap="round"/>'
+        eyes = '<rect x="-23" y="-3" width="6" height="6"/><rect x="17" y="-3" width="6" height="6"/>'
+        mouth = '<path d="M-10 22 h20" fill="none" stroke-width="3" stroke-linecap="square"/>'
     elif face_type in {"nervous", "worried", "busy", "distant"}:
-        eyes = '<circle cx="-20" cy="0" r="4"/><circle cx="20" cy="0" r="4"/>'
-        mouth = '<path d="M-14 26 q14 -8 28 0" fill="none" stroke-width="4" stroke-linecap="round"/>'
+        eyes = '<rect x="-24" y="-4" width="8" height="8"/><rect x="16" y="-4" width="8" height="8"/>'
+        mouth = '<path d="M-14 26 l10 -4 h8 l10 4" fill="none" stroke-width="4" stroke-linecap="square" stroke-linejoin="round"/>'
     elif face_type == "fried":
-        eyes = '<path d="M-26 -4 l10 10 M-16 -4 l-10 10 M14 -4 l10 10 M24 -4 l-10 10" stroke-width="4" stroke-linecap="round"/>'
+        eyes = '<path d="M-26 -4 l10 10 M-16 -4 l-10 10 M14 -4 l10 10 M24 -4 l-10 10" stroke-width="4" stroke-linecap="square"/>'
         mouth = '<circle cx="0" cy="24" r="7" fill="none" stroke-width="4"/>'
     elif face_type == "smirk":
-        eyes = '<circle cx="-20" cy="0" r="4"/><circle cx="20" cy="0" r="4"/>'
-        mouth = '<path d="M-8 22 q12 8 24 -2" fill="none" stroke-width="4" stroke-linecap="round"/>'
+        eyes = '<rect x="-24" y="-4" width="8" height="8"/><rect x="16" y="-4" width="8" height="8"/>'
+        mouth = '<path d="M-8 22 l10 4 h10 l8 -2" fill="none" stroke-width="4" stroke-linecap="square" stroke-linejoin="round"/>'
     elif face_type == "laugh":
-        eyes = '<path d="M-24 -2 q4 4 8 0 M16 -2 q4 4 8 0" fill="none" stroke-width="4" stroke-linecap="round"/>'
-        mouth = '<path d="M-16 20 q16 18 32 0" fill="none" stroke-width="5" stroke-linecap="round"/>'
+        eyes = '<path d="M-24 0 h8 M16 0 h8" fill="none" stroke-width="4" stroke-linecap="square"/>'
+        mouth = '<path d="M-16 20 l8 10 h16 l8 -10" fill="none" stroke-width="5" stroke-linecap="square" stroke-linejoin="round"/>'
     elif face_type == "confused":
-        eyes = '<circle cx="-20" cy="0" r="4"/><circle cx="20" cy="0" r="4"/>'
-        mouth = '<path d="M-14 22 q14 -4 28 2" fill="none" stroke-width="4" stroke-linecap="round"/>'
+        eyes = '<rect x="-24" y="-4" width="8" height="8"/><rect x="16" y="-4" width="8" height="8"/>'
+        mouth = '<path d="M-14 22 l10 -2 h8 l10 4" fill="none" stroke-width="4" stroke-linecap="square" stroke-linejoin="round"/>'
     elif face_type == "hidden":
         eyes = '<rect x="-30" y="-8" width="20" height="10" rx="4"/><rect x="10" y="-8" width="20" height="10" rx="4"/><rect x="-10" y="-6" width="20" height="4"/>'
-        mouth = '<path d="M-12 22 q12 8 24 0" fill="none" stroke-width="4" stroke-linecap="round"/>'
+        mouth = '<path d="M-12 22 l8 4 h8 l8 -4" fill="none" stroke-width="4" stroke-linecap="square" stroke-linejoin="round"/>'
     elif face_type == "copy":
-        eyes = '<circle cx="-20" cy="0" r="4"/><circle cx="20" cy="0" r="4"/>'
-        mouth = '<path d="M-16 22 q16 4 32 0" fill="none" stroke-width="4" stroke-linecap="round"/>'
+        eyes = '<rect x="-24" y="-4" width="8" height="8"/><rect x="16" y="-4" width="8" height="8"/>'
+        mouth = '<path d="M-16 22 l10 2 h12 l10 -2" fill="none" stroke-width="4" stroke-linecap="square" stroke-linejoin="round"/>'
     elif face_type == "split":
-        eyes = '<circle cx="-20" cy="0" r="4"/><circle cx="20" cy="0" r="4"/>'
-        mouth = '<path d="M-14 24 q7 8 14 0 q7 -8 14 0" fill="none" stroke-width="4" stroke-linecap="round"/>'
+        eyes = '<rect x="-24" y="-4" width="8" height="8"/><rect x="16" y="-4" width="8" height="8"/>'
+        mouth = '<path d="M-14 24 l8 6 h6 l6 -6 h6 l8 6" fill="none" stroke-width="4" stroke-linecap="square" stroke-linejoin="round"/>'
     else:
-        eyes = '<circle cx="-20" cy="0" r="4"/><circle cx="20" cy="0" r="4"/>'
-        mouth = '<path d="M-14 22 q14 8 28 0" fill="none" stroke-width="4" stroke-linecap="round"/>'
+        eyes = '<rect x="-24" y="-4" width="8" height="8"/><rect x="16" y="-4" width="8" height="8"/>'
+        mouth = '<path d="M-14 22 l8 4 h12 l8 -4" fill="none" stroke-width="4" stroke-linecap="square" stroke-linejoin="round"/>'
     return f'<g fill="{accent}" stroke="{accent}">{eyes}{mouth}</g>'
+
+
+def hat(spec: dict) -> str:
+    accent = spec["accent"]
+    panel = spec["panel"]
+    title = spec["title"]
+    hats = {
+        "PUA": f'<path d="M176 114 h76 l-8 18 h-60z" fill="{panel}" stroke="{accent}" stroke-width="4"/>',
+        "PPT": f'<path d="M182 110 h64 l10 14 h-84z" fill="{panel}" stroke="{accent}" stroke-width="4"/>',
+        "DBQ": f'<path d="M186 108 h56 l8 12 h-72z" fill="{panel}" stroke="{accent}" stroke-width="4"/>',
+        "OJBK": f'<path d="M188 110 h52 v18 h-52z" fill="{panel}" stroke="{accent}" stroke-width="4"/>',
+        "VM50": f'<path d="M182 108 h64 l-8 18 h-48z" fill="{panel}" stroke="{accent}" stroke-width="4"/>',
+        "SQ": f'<path d="M184 108 h60 l-10 18 h-40z" fill="{panel}" stroke="{accent}" stroke-width="4"/>',
+        "U1S1": f'<path d="M188 108 h52 l12 10 h-76z" fill="{panel}" stroke="{accent}" stroke-width="4"/>',
+        "DDDD": f'<path d="M180 108 h68 l-6 14 h-56z" fill="{panel}" stroke="{accent}" stroke-width="4"/>',
+        "XSWL": f'<path d="M176 116 l18 -18 20 18 20 -18 18 18 v8 h-76z" fill="{panel}" stroke="{accent}" stroke-width="4" stroke-linejoin="round"/>',
+        "BDJW": f'<path d="M176 116 l38 -18 38 18 -38 18z" fill="{panel}" stroke="{accent}" stroke-width="4" stroke-linejoin="round"/>',
+        "WTD": f'<path d="M180 112 h68 l-12 16 h-44z" fill="{panel}" stroke="{accent}" stroke-width="4"/>',
+        "404": f'<path d="M184 112 h60 l-8 16 h-44z" fill="{panel}" stroke="{accent}" stroke-width="4"/>',
+        "CTRL-C": f'<path d="M182 110 h64 l-8 16 h-48z" fill="{panel}" stroke="{accent}" stroke-width="4"/>',
+        "429": f'<path d="M186 110 h56 l-10 16 h-36z" fill="{panel}" stroke="{accent}" stroke-width="4"/>',
+        "NPC": f'<path d="M186 112 h56 l8 10 h-72z" fill="{panel}" stroke="{accent}" stroke-width="4"/>',
+        "KFC": f'<path d="M182 112 h64 l-6 16 h-52z" fill="{panel}" stroke="{accent}" stroke-width="4"/>',
+    }
+    return hats.get(title, "")
 
 
 def costume(spec: dict) -> str:
     accent = spec["accent"]
     title = spec["title"]
     extras = {
-        "PUA": f'<path d="M188 188 h38" stroke="{accent}" stroke-width="8" stroke-linecap="round"/>',
-        "CPU": f'<path d="M228 208 q28 16 48 0" fill="none" stroke="{accent}" stroke-width="6" stroke-linecap="round"/>',
-        "PPT": f'<path d="M196 162 h62 M196 178 h48" stroke="{accent}" stroke-width="6" stroke-linecap="round"/>',
-        "BBQ": f'<path d="M192 144 l12 18 M224 136 l12 18" stroke="{accent}" stroke-width="6" stroke-linecap="round" opacity="0.65"/>',
+        "PUA": f'<path d="M188 188 h38" stroke="{accent}" stroke-width="8" stroke-linecap="square"/>',
+        "CPU": f'<path d="M228 208 l14 8 h20 l14 -8" fill="none" stroke="{accent}" stroke-width="6" stroke-linecap="square" stroke-linejoin="round"/>',
+        "PPT": f'<path d="M196 162 h62 M196 178 h48" stroke="{accent}" stroke-width="6" stroke-linecap="square"/>',
+        "BBQ": f'<path d="M192 144 l12 18 M224 136 l12 18" stroke="{accent}" stroke-width="6" stroke-linecap="square" opacity="0.65"/>',
         "BRO": svg_text(292, 164, "👍", 22, accent, 800, "middle"),
         "DBQ": svg_text(180, 160, "!", 18, accent, 800, "middle"),
         "VM50": svg_text(292, 164, "$", 22, accent, 900, "middle"),
-        "SQ": f'<path d="M190 182 h34" stroke="{accent}" stroke-width="6" stroke-linecap="round"/>',
-        "U1S1": f'<path d="M182 198 h46" stroke="{accent}" stroke-width="8" stroke-linecap="round"/>',
-        "DDDD": f'<path d="M178 140 h52" stroke="{accent}" stroke-width="6" stroke-linecap="round"/>',
+        "SQ": f'<path d="M190 182 h34" stroke="{accent}" stroke-width="6" stroke-linecap="square"/>',
+        "U1S1": f'<path d="M182 198 h46" stroke="{accent}" stroke-width="8" stroke-linecap="square"/>',
+        "DDDD": f'<path d="M178 140 h52" stroke="{accent}" stroke-width="6" stroke-linecap="square"/>',
         "XSWL": svg_text(292, 164, "*", 22, accent, 900, "middle"),
-        "BDJW": f'<path d="M190 150 h48" stroke="{accent}" stroke-width="6" stroke-linecap="round"/>',
-        "SRDS": f'<path d="M206 196 v18" stroke="{accent}" stroke-width="6" stroke-linecap="round"/>',
-        "NMSL": f'<path d="M182 156 h46 M182 172 h46 M182 188 h30" stroke="{accent}" stroke-width="5" stroke-linecap="round"/>',
+        "BDJW": f'<path d="M190 150 h48" stroke="{accent}" stroke-width="6" stroke-linecap="square"/>',
+        "SRDS": f'<path d="M206 196 v18" stroke="{accent}" stroke-width="6" stroke-linecap="square"/>',
+        "NMSL": f'<path d="M182 156 h46 M182 172 h46 M182 188 h30" stroke="{accent}" stroke-width="5" stroke-linecap="square"/>',
         "WTD": svg_text(292, 162, "?", 22, accent, 900, "middle"),
         "404": svg_text(180, 156, "404", 16, accent, 900, "start"),
-        "RAG": f'<path d="M184 154 l16 16 16 -16 16 16" fill="none" stroke="{accent}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>',
-        "CTRL-C": f'<path d="M184 162 h54" stroke="{accent}" stroke-width="6" stroke-dasharray="8 8" stroke-linecap="round"/>',
+        "RAG": f'<path d="M184 154 l16 16 16 -16 16 16" fill="none" stroke="{accent}" stroke-width="5" stroke-linecap="square" stroke-linejoin="miter"/>',
+        "CTRL-C": f'<path d="M184 162 h54" stroke="{accent}" stroke-width="6" stroke-dasharray="8 8" stroke-linecap="square"/>',
         "429": svg_text(180, 156, "...", 22, accent, 800, "start"),
         "EMO": f'<path d="M208 136 v92" stroke="{accent}" stroke-width="5" opacity="0.4"/>',
         "NPC": svg_text(292, 164, "❤", 20, accent, 800, "middle"),
-        "KFC": f'<path d="M184 152 h46 M184 170 h46" stroke="{accent}" stroke-width="6" stroke-linecap="round"/>',
+        "KFC": f'<path d="M184 152 h46 M184 170 h46" stroke="{accent}" stroke-width="6" stroke-linecap="square"/>',
     }
     return extras.get(title, "")
 
@@ -427,15 +452,15 @@ def character(spec: dict) -> str:
     face = face_markup(spec["face"], accent)
     return f"""
     <g>
-        <ellipse cx="214" cy="362" rx="72" ry="18" fill="#000000" opacity="0.1"/>
-        <path d="M168 210 q46 -24 92 0 v84 q0 40 -46 40 q-46 0 -46 -40z" fill="{body}" stroke="{accent}" stroke-width="4"/>
-        <path d="M180 334 v50 M248 334 v50" fill="none" stroke="{accent}" stroke-width="14" stroke-linecap="round"/>
-        <path d="M168 246 q-46 18 -56 62" fill="none" stroke="{accent}" stroke-width="14" stroke-linecap="round"/>
-        <path d="M260 246 q42 16 52 56" fill="none" stroke="{accent}" stroke-width="14" stroke-linecap="round"/>
-        <path d="M170 384 h28 M232 384 h28" fill="none" stroke="{accent}" stroke-width="14" stroke-linecap="round"/>
-        <circle cx="214" cy="160" r="56" fill="{head}" stroke="{accent}" stroke-width="4"/>
+        <path d="M152 366 l28 -18 h68 l28 18 l-16 8 h-92z" fill="#000000" opacity="0.1"/>
+        <path d="M172 216 l32 -20 h20 l32 20 v82 l-16 30 h-52 l-16 -30z" fill="{body}" stroke="{accent}" stroke-width="4" stroke-linejoin="miter"/>
+        <path d="M188 328 v54 M240 328 v54" fill="none" stroke="{accent}" stroke-width="12" stroke-linecap="square"/>
+        <path d="M166 248 l-44 36 M262 248 l44 34" fill="none" stroke="{accent}" stroke-width="12" stroke-linecap="square"/>
+        <path d="M178 382 h26 M236 382 h26" fill="none" stroke="{accent}" stroke-width="12" stroke-linecap="square"/>
+        <circle cx="214" cy="160" r="52" fill="{head}" stroke="{accent}" stroke-width="4"/>
+        {hat(spec)}
         <g transform="translate(214 154)">{face}</g>
-        <path d="M170 112 q44 -26 88 0" fill="none" stroke="{accent}" stroke-width="8" stroke-linecap="round" opacity="0.12"/>
+        <path d="M168 112 l46 -18 l46 18" fill="none" stroke="{accent}" stroke-width="8" stroke-linecap="square" opacity="0.12"/>
         {costume(spec)}
     </g>
     """
@@ -451,22 +476,22 @@ def build_svg(spec: dict) -> str:
       <stop offset="0" stop-color="{bg1}"/>
       <stop offset="1" stop-color="{bg2}"/>
     </linearGradient>
-    <linearGradient id="light" x1="110" y1="62" x2="366" y2="352" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.72"/>
-      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.1"/>
+    <linearGradient id="light" x1="96" y1="72" x2="388" y2="352" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.58"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.08"/>
     </linearGradient>
   </defs>
   <rect x="16" y="16" width="480" height="480" rx="38" fill="url(#bg)"/>
-  <path d="M92 88 q114 -72 240 -18 q108 46 94 188 q-14 152 -178 154 q-144 2 -190 -112 q-48 -118 34 -212z" fill="url(#light)"/>
-  <rect x="34" y="34" width="444" height="444" rx="30" fill="#FFFFFF" opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.4"/>
+  <path d="M102 92 l178 -34 l126 82 l-24 214 l-194 62 l-110 -88 l24 -176z" fill="url(#light)"/>
+  <path d="M42 40 h428 l10 10 v412 l-10 10 h-428 l-8 -10 v-412z" fill="#FFFFFF" opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.4"/>
   {background_scene(spec)}
   {floor(spec)}
   {character(spec)}
   {prop_art(spec)}
-  <rect x="46" y="404" width="188" height="54" rx="20" fill="#FFFFFF" opacity="0.8"/>
+  <rect x="46" y="404" width="188" height="54" rx="8" fill="#FFFFFF" opacity="0.8"/>
   {svg_text(68, 438, spec["title"], 40, accent, 900)}
   {svg_text(68, 462, spec["subtitle"], 16, "#344054", 700)}
-  <rect x="384" y="422" width="72" height="26" rx="13" fill="{panel}" stroke="{accent}" stroke-width="3"/>
+  <rect x="384" y="422" width="72" height="26" rx="6" fill="{panel}" stroke="{accent}" stroke-width="3"/>
   {svg_text(420, 440, "SBAI", 14, accent, 900, "middle")}
 </svg>
 """

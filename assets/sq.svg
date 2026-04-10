@@ -4,45 +4,45 @@
       <stop offset="0" stop-color="#F3D9FA"/>
       <stop offset="1" stop-color="#E599F7"/>
     </linearGradient>
-    <linearGradient id="light" x1="110" y1="62" x2="366" y2="352" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.72"/>
-      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.1"/>
+    <linearGradient id="light" x1="96" y1="72" x2="388" y2="352" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.58"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.08"/>
     </linearGradient>
   </defs>
   <rect x="16" y="16" width="480" height="480" rx="38" fill="url(#bg)"/>
-  <path d="M92 88 q114 -72 240 -18 q108 46 94 188 q-14 152 -178 154 q-144 2 -190 -112 q-48 -118 34 -212z" fill="url(#light)"/>
-  <rect x="34" y="34" width="444" height="444" rx="30" fill="#FFFFFF" opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.4"/>
+  <path d="M102 92 l178 -34 l126 82 l-24 214 l-194 62 l-110 -88 l24 -176z" fill="url(#light)"/>
+  <path d="M42 40 h428 l10 10 v412 l-10 10 h-428 l-8 -10 v-412z" fill="#FFFFFF" opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.4"/>
   
         <path d="M74 124 q72 -54 144 0 q74 54 146 0 q38 -24 74 0" fill="none" stroke="#FFFFFF" stroke-width="12" opacity="0.22" stroke-linecap="round"/>
         
   
-    <ellipse cx="256" cy="384" rx="182" ry="52" fill="#FCF0FF" opacity="0.96"/>
-    <path d="M64 388 q96 -40 192 0 q98 40 192 0" fill="none" stroke="#9C36B5" stroke-width="6" opacity="0.18" stroke-linecap="round"/>
+    <path d="M74 390 l118 -44 h128 l118 44 v26 h-364z" fill="#FCF0FF" opacity="0.96"/>
+    <path d="M98 388 h316" fill="none" stroke="#9C36B5" stroke-width="6" opacity="0.18" stroke-linecap="round"/>
     
   
     <g>
-        <ellipse cx="214" cy="362" rx="72" ry="18" fill="#000000" opacity="0.1"/>
-        <path d="M168 210 q46 -24 92 0 v84 q0 40 -46 40 q-46 0 -46 -40z" fill="#FEF7FF" stroke="#9C36B5" stroke-width="4"/>
-        <path d="M180 334 v50 M248 334 v50" fill="none" stroke="#9C36B5" stroke-width="14" stroke-linecap="round"/>
-        <path d="M168 246 q-46 18 -56 62" fill="none" stroke="#9C36B5" stroke-width="14" stroke-linecap="round"/>
-        <path d="M260 246 q42 16 52 56" fill="none" stroke="#9C36B5" stroke-width="14" stroke-linecap="round"/>
-        <path d="M170 384 h28 M232 384 h28" fill="none" stroke="#9C36B5" stroke-width="14" stroke-linecap="round"/>
-        <circle cx="214" cy="160" r="56" fill="#E599F7" stroke="#9C36B5" stroke-width="4"/>
-        <g transform="translate(214 154)"><g fill="#9C36B5" stroke="#9C36B5"><circle cx="-20" cy="0" r="4"/><circle cx="20" cy="0" r="4"/><path d="M-8 22 q12 8 24 -2" fill="none" stroke-width="4" stroke-linecap="round"/></g></g>
-        <path d="M170 112 q44 -26 88 0" fill="none" stroke="#9C36B5" stroke-width="8" stroke-linecap="round" opacity="0.12"/>
-        <path d="M190 182 h34" stroke="#9C36B5" stroke-width="6" stroke-linecap="round"/>
+        <path d="M152 366 l28 -18 h68 l28 18 l-16 8 h-92z" fill="#000000" opacity="0.1"/>
+        <path d="M172 216 l32 -20 h20 l32 20 v82 l-16 30 h-52 l-16 -30z" fill="#FEF7FF" stroke="#9C36B5" stroke-width="4" stroke-linejoin="miter"/>
+        <path d="M188 328 v54 M240 328 v54" fill="none" stroke="#9C36B5" stroke-width="12" stroke-linecap="square"/>
+        <path d="M166 248 l-44 36 M262 248 l44 34" fill="none" stroke="#9C36B5" stroke-width="12" stroke-linecap="square"/>
+        <path d="M178 382 h26 M236 382 h26" fill="none" stroke="#9C36B5" stroke-width="12" stroke-linecap="square"/>
+        <circle cx="214" cy="160" r="52" fill="#E599F7" stroke="#9C36B5" stroke-width="4"/>
+        <path d="M184 108 h60 l-10 18 h-40z" fill="#FCF0FF" stroke="#9C36B5" stroke-width="4"/>
+        <g transform="translate(214 154)"><g fill="#9C36B5" stroke="#9C36B5"><rect x="-24" y="-4" width="8" height="8"/><rect x="16" y="-4" width="8" height="8"/><path d="M-8 22 l10 4 h10 l8 -2" fill="none" stroke-width="4" stroke-linecap="square" stroke-linejoin="round"/></g></g>
+        <path d="M168 112 l46 -18 l46 18" fill="none" stroke="#9C36B5" stroke-width="8" stroke-linecap="square" opacity="0.12"/>
+        <path d="M190 182 h34" stroke="#9C36B5" stroke-width="6" stroke-linecap="square"/>
     </g>
     
   
         <g>
-            <g><rect x="306" y="78" width="128" height="50" rx="18" fill="#FFFFFF" stroke="#9C36B5" stroke-width="3"/><path d="M338 128 l12 18 14 -18" fill="#FFFFFF" stroke="#9C36B5" stroke-width="3" stroke-linejoin="round"/><text x="370" y="109" fill="#9C36B5" fill-opacity="1.0" font-family="Avenir Next,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" text-anchor="middle">sure :)</text></g>
+            <g><path d="M306 86 l8 -8 h112 l8 8 v42 l-8 8 h-112 l-8 -8 z" fill="#FFFFFF" stroke="#9C36B5" stroke-width="3" stroke-linejoin="round"/><path d="M340 128 l10 16 14 -16" fill="#FFFFFF" stroke="#9C36B5" stroke-width="3" stroke-linejoin="round"/><text x="370" y="109" fill="#9C36B5" fill-opacity="1.0" font-family="Avenir Next,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" text-anchor="middle">sure :)</text></g>
             <path d="M334 214 h76 a20 20 0 0 0 20 -20 v-12 h-96 z" fill="#FCF0FF" stroke="#9C36B5" stroke-width="4"/>
             <path d="M430 186 q18 0 18 14 q0 14 -18 14" fill="none" stroke="#9C36B5" stroke-width="4"/>
         </g>
         
-  <rect x="46" y="404" width="188" height="54" rx="20" fill="#FFFFFF" opacity="0.8"/>
+  <rect x="46" y="404" width="188" height="54" rx="8" fill="#FFFFFF" opacity="0.8"/>
   <text x="68" y="438" fill="#9C36B5" fill-opacity="1.0" font-family="Avenir Next,Segoe UI,Arial,sans-serif" font-size="40" font-weight="900" text-anchor="start">SQ</text>
   <text x="68" y="462" fill="#344054" fill-opacity="1.0" font-family="Avenir Next,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" text-anchor="start">Polite Poison</text>
-  <rect x="384" y="422" width="72" height="26" rx="13" fill="#FCF0FF" stroke="#9C36B5" stroke-width="3"/>
+  <rect x="384" y="422" width="72" height="26" rx="6" fill="#FCF0FF" stroke="#9C36B5" stroke-width="3"/>
   <text x="420" y="440" fill="#9C36B5" fill-opacity="1.0" font-family="Avenir Next,Segoe UI,Arial,sans-serif" font-size="14" font-weight="900" text-anchor="middle">SBAI</text>
 </svg>
