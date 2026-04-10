@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="44" y1="44" x2="468" y2="468" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFD6A5"/>
+      <stop offset="1" stop-color="#FDFFB6"/>
+    </linearGradient>
+    <linearGradient id="light" x1="110" y1="62" x2="366" y2="352" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+  <rect x="16" y="16" width="480" height="480" rx="38" fill="url(#bg)"/>
+  <path d="M92 88 q114 -72 240 -18 q108 46 94 188 q-14 152 -178 154 q-144 2 -190 -112 q-48 -118 34 -212z" fill="url(#light)"/>
+  <rect x="34" y="34" width="444" height="444" rx="30" fill="#FFFFFF" opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.4"/>
+  
+        <circle cx="90" cy="104" r="10" fill="#FFFFFF" opacity="0.24"/>
+        <circle cx="130" cy="134" r="8" fill="#FFFFFF" opacity="0.24"/>
+        <circle cx="412" cy="120" r="12" fill="#FFFFFF" opacity="0.24"/>
+        <circle cx="378" cy="94" r="7" fill="#FFFFFF" opacity="0.24"/>
+        
+  
+    <ellipse cx="256" cy="384" rx="182" ry="52" fill="#FFF7E6" opacity="0.96"/>
+    <path d="M64 388 q96 -40 192 0 q98 40 192 0" fill="none" stroke="#FF6B6B" stroke-width="6" opacity="0.18" stroke-linecap="round"/>
+    
+  
+    <g>
+        <ellipse cx="214" cy="362" rx="72" ry="18" fill="#000000" opacity="0.1"/>
+        <path d="M168 210 q46 -24 92 0 v84 q0 40 -46 40 q-46 0 -46 -40z" fill="#FFFDF4" stroke="#FF6B6B" stroke-width="4"/>
+        <path d="M180 334 v50 M248 334 v50" fill="none" stroke="#FF6B6B" stroke-width="14" stroke-linecap="round"/>
+        <path d="M168 246 q-46 18 -56 62" fill="none" stroke="#FF6B6B" stroke-width="14" stroke-linecap="round"/>
+        <path d="M260 246 q42 16 52 56" fill="none" stroke="#FF6B6B" stroke-width="14" stroke-linecap="round"/>
+        <path d="M170 384 h28 M232 384 h28" fill="none" stroke="#FF6B6B" stroke-width="14" stroke-linecap="round"/>
+        <circle cx="214" cy="160" r="56" fill="#FFD6A5" stroke="#FF6B6B" stroke-width="4"/>
+        <g transform="translate(214 154)"><g fill="#FF6B6B" stroke="#FF6B6B"><path d="M-24 -2 q4 4 8 0 M16 -2 q4 4 8 0" fill="none" stroke-width="4" stroke-linecap="round"/><path d="M-16 20 q16 18 32 0" fill="none" stroke-width="5" stroke-linecap="round"/></g></g>
+        <path d="M170 112 q44 -26 88 0" fill="none" stroke="#FF6B6B" stroke-width="8" stroke-linecap="round" opacity="0.12"/>
+        <text x="292" y="164" fill="#FF6B6B" fill-opacity="1.0" font-family="Avenir Next,Segoe UI,Arial,sans-serif" font-size="22" font-weight="900" text-anchor="middle">*</text>
+    </g>
+    
+  
+        <g>
+            <path d="M322 82 l20 30 22 -30 22 30 20 -30 v38 h-84z" fill="#FF6B6B" opacity="0.84"/>
+            <g><rect x="322" y="176" width="108" height="54" rx="12" fill="#FFFFFF" stroke="#FF6B6B" stroke-width="3"/><text x="376" y="209" fill="#FF6B6B" fill-opacity="1.0" font-family="Avenir Next,Segoe UI,Arial,sans-serif" font-size="16" font-weight="800" text-anchor="middle">:3</text></g>
+        </g>
+        
+  <rect x="46" y="404" width="188" height="54" rx="20" fill="#FFFFFF" opacity="0.8"/>
+  <text x="68" y="438" fill="#FF6B6B" fill-opacity="1.0" font-family="Avenir Next,Segoe UI,Arial,sans-serif" font-size="40" font-weight="900" text-anchor="start">XSWL</text>
+  <text x="68" y="462" fill="#344054" fill-opacity="1.0" font-family="Avenir Next,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" text-anchor="start">Chaos Jester</text>
+  <rect x="384" y="422" width="72" height="26" rx="13" fill="#FFF7E6" stroke="#FF6B6B" stroke-width="3"/>
+  <text x="420" y="440" fill="#FF6B6B" fill-opacity="1.0" font-family="Avenir Next,Segoe UI,Arial,sans-serif" font-size="14" font-weight="900" text-anchor="middle">SBAI</text>
+</svg>

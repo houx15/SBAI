@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="44" y1="44" x2="468" y2="468" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFE8CC"/>
+      <stop offset="1" stop-color="#FFD43B"/>
+    </linearGradient>
+    <linearGradient id="light" x1="110" y1="62" x2="366" y2="352" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+  <rect x="16" y="16" width="480" height="480" rx="38" fill="url(#bg)"/>
+  <path d="M92 88 q114 -72 240 -18 q108 46 94 188 q-14 152 -178 154 q-144 2 -190 -112 q-48 -118 34 -212z" fill="url(#light)"/>
+  <rect x="34" y="34" width="444" height="444" rx="30" fill="#FFFFFF" opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.4"/>
+  
+        <rect x="76" y="96" width="84" height="54" rx="12" fill="#FFFFFF" opacity="0.16"/>
+        <rect x="352" y="92" width="84" height="62" rx="12" fill="#FFFFFF" opacity="0.16"/>
+        <path d="M94 168 h46 M372 172 h44" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" opacity="0.18"/>
+        
+  
+    <ellipse cx="256" cy="384" rx="182" ry="52" fill="#FFF4E6" opacity="0.96"/>
+    <path d="M64 388 q96 -40 192 0 q98 40 192 0" fill="none" stroke="#E8590C" stroke-width="6" opacity="0.18" stroke-linecap="round"/>
+    
+  
+    <g>
+        <ellipse cx="214" cy="362" rx="72" ry="18" fill="#000000" opacity="0.1"/>
+        <path d="M168 210 q46 -24 92 0 v84 q0 40 -46 40 q-46 0 -46 -40z" fill="#FFF9F3" stroke="#E8590C" stroke-width="4"/>
+        <path d="M180 334 v50 M248 334 v50" fill="none" stroke="#E8590C" stroke-width="14" stroke-linecap="round"/>
+        <path d="M168 246 q-46 18 -56 62" fill="none" stroke="#E8590C" stroke-width="14" stroke-linecap="round"/>
+        <path d="M260 246 q42 16 52 56" fill="none" stroke="#E8590C" stroke-width="14" stroke-linecap="round"/>
+        <path d="M170 384 h28 M232 384 h28" fill="none" stroke="#E8590C" stroke-width="14" stroke-linecap="round"/>
+        <circle cx="214" cy="160" r="56" fill="#FFC078" stroke="#E8590C" stroke-width="4"/>
+        <g transform="translate(214 154)"><g fill="#E8590C" stroke="#E8590C"><path d="M-26 -2 l12 -4 M14 -6 l12 4" stroke-width="4" stroke-linecap="round"/><path d="M-12 22 h24" fill="none" stroke-width="4" stroke-linecap="round"/></g></g>
+        <path d="M170 112 q44 -26 88 0" fill="none" stroke="#E8590C" stroke-width="8" stroke-linecap="round" opacity="0.12"/>
+        <path d="M184 152 h46 M184 170 h46" stroke="#E8590C" stroke-width="6" stroke-linecap="round"/>
+    </g>
+    
+  
+        <g>
+            <rect x="302" y="180" width="136" height="54" rx="10" fill="#FFFFFF" opacity="0.94" stroke="#E8590C" stroke-width="4"/>
+            <rect x="316" y="136" width="34" height="38" rx="8" fill="#FFF4E6" stroke="#E8590C" stroke-width="3"/>
+            <rect x="356" y="122" width="40" height="52" rx="8" fill="#FFFFFF" stroke="#E8590C" stroke-width="3"/>
+            <rect x="406" y="142" width="22" height="30" rx="8" fill="#FFF4E6" stroke="#E8590C" stroke-width="3"/>
+            <text x="370" y="212" fill="#E8590C" fill-opacity="1.0" font-family="Avenir Next,Segoe UI,Arial,sans-serif" font-size="15" font-weight="800" text-anchor="middle">doing all of it</text>
+        </g>
+        
+  <rect x="46" y="404" width="188" height="54" rx="20" fill="#FFFFFF" opacity="0.8"/>
+  <text x="68" y="438" fill="#E8590C" fill-opacity="1.0" font-family="Avenir Next,Segoe UI,Arial,sans-serif" font-size="40" font-weight="900" text-anchor="start">KFC</text>
+  <text x="68" y="462" fill="#344054" fill-opacity="1.0" font-family="Avenir Next,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" text-anchor="start">Can-Do Storm</text>
+  <rect x="384" y="422" width="72" height="26" rx="13" fill="#FFF4E6" stroke="#E8590C" stroke-width="3"/>
+  <text x="420" y="440" fill="#E8590C" fill-opacity="1.0" font-family="Avenir Next,Segoe UI,Arial,sans-serif" font-size="14" font-weight="900" text-anchor="middle">SBAI</text>
+</svg>
